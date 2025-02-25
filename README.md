@@ -63,8 +63,6 @@ project/
 │   └── schizophrenia_dataset.csv #датасет  
 ├── model.py            # Модель и обучение  
 ├── label_encoder.pkl  
-├── schizofrenia_model.pkl
-├── app.py              # Веб-приложение
-└── requirements.txt    # Зависимости проекта
+├── schizofrenia_model.pkl  
+└── app.py              # Веб-приложение  
 
-Теперь вы готовы к работе с проектом и запуску всех его частей!
