@@ -15,9 +15,15 @@
 
 1. Перейдите в папку backend.
 2. Откройте терминал в этой папке и выполните следующие команды:
-     docker-compose up -d
+   ```bash
+   docker-compose up -d
+   ```
+   ```bash
    python3 producer.py
+   ```
+   ```bash
    python3 consumer.py
+   ```
    
 ### Шаг 2: Запуск ML части
 
@@ -25,9 +31,9 @@
 
 1. Перейдите в основной репозиторий.
 2. Запустите модель с помощью команды:
-     '''
-   python3 model.ipynb
-   '''
+   ``` bash
+   python3 model.py
+   ```
       
    В процессе работы будут скачаны два файла: label_encoder.pkl и schizofrenia_model.pkl, которые необходимы для дальнейшей работы Web приложения.
 
@@ -35,23 +41,29 @@
 
 После запуска ML части проекта можно перейти к запуску фронтенд части:
 
-1. Перейдите в основной репозиторий.
-2. Для запуска веб-приложения используйте команду:
+1. Для запуска веб-приложения используйте команду:
+     ``` bash
      streamlit run app.py
+     ```
    
 ### Дополнительно
 
 Если вам нужно ознакомиться с предварительной обработкой данных и подбором гиперпараметров модели, вы можете зайти в папку data EDA и открыть ноутбук с необходимыми процессами.
 
 ## Структура репозитория
-project/
-├── band/               # Backend часть
-│   ├── producer.py     # Генерация данных
+project/  
+├── backend/               # Backend часть  
+│   └── config.py       # конфиги для запуска
+│   ├── producer.py     # Генерация данных  
 │   ├── consumer.py     # Прием и сохранение данных
-│   └── docker-compose.yml
+│   └── docker-compose.yml #докеры
+│   └── schizophrenia_dataset.csv #датасет
 ├── data EDA/           # Анализ данных и обработка
-│   └── preprocessing_and_model_tuning.ipynb
-├── model.ipynb         # Модель и обучение
+│   └── preprocessing_and_model_tuning.ipynb # ноутбук с предварительной обработкой данных и подбором гиперпараметров модели
+│   └── schizophrenia_dataset.csv #датасет
+├── model.py            # Модель и обучение
+├── label_encoder.pkl
+├── schizofrenia_model.pkl
 ├── app.py              # Веб-приложение
 └── requirements.txt    # Зависимости проекта
 
