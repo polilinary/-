@@ -52,17 +52,17 @@
 
 ## Структура репозитория
 project/  
-├── backend/               # Backend часть  
-│   └── config.py       # конфиги для запуска
-│   ├── producer.py     # Генерация данных  
-│   ├── consumer.py     # Прием и сохранение данных
-│   └── docker-compose.yml #докеры
-│   └── schizophrenia_dataset.csv #датасет
-├── data EDA/           # Анализ данных и обработка
-│   └── preprocessing_and_model_tuning.ipynb # ноутбук с предварительной обработкой данных и подбором гиперпараметров модели
-│   └── schizophrenia_dataset.csv #датасет
-├── model.py            # Модель и обучение
-├── label_encoder.pkl
+├── backend/               # Backend часть    
+│   └── config.py       # конфиги для запуска  
+│   ├── producer.py     # Генерация данных    
+│   ├── consumer.py     # Прием и сохранение данных  
+│   └── docker-compose.yml #докеры  
+│   └── schizophrenia_dataset.csv #датасет  
+├── data EDA/           # Анализ данных и обработка  
+│   └── preprocessing_and_model_tuning.ipynb # ноутбук с предварительной обработкой данных и подбором гиперпараметров модели  
+│   └── schizophrenia_dataset.csv #датасет  
+├── model.py            # Модель и обучение  
+├── label_encoder.pkl  
 ├── schizofrenia_model.pkl
 ├── app.py              # Веб-приложение
 └── requirements.txt    # Зависимости проекта
